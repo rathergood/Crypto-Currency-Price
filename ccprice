@@ -1,0 +1,28 @@
+//returns price of cryptocurrency from coinmarketcap api.
+//takes two parameters, the name of the CC and whether you want it to return
+//the price in USD or BTC
+
+//example: =ccprice("ethereum", "usd")
+
+function ccprice(name, currency) 
+{
+var url = "https://api.coinmarketcap.com/v1/ticker/" + name
+var response = UrlFetchApp.fetch(url);
+var json = response.getContentText();
+var data = JSON.parse(json);
+
+  if (currency == "usd") {  
+      var price = data[0].price_usd;
+      } 
+  else if (currency == "btc") {
+      var price = data[0].price_btc
+      }
+  else {
+    var price = "currency?"
+    }
+return price
+
+}
+
+//had to add [0] to data because w/o it price was an array with one element in it
+//instead of the element itself
