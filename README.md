@@ -6,11 +6,18 @@ To use in google sheets:
 1. Open script editor (Under tools)
 2. File new "script file", give it a name
 3. Copy Code and Save
-4. In your sheet, type in =ccprice(cryptocurrency, usd)
+4. In your sheet, type in =ccprice(cryptocurrency, currency)
    example: 
-   =ccprice("ethereum", "usd")
+   =ccprice("ethereum", "USD")
+
    
-   you can also type "btc" instead of usd if you want to return the price in bitcoin
+The currency parameter accepts the following currencies:
+"BTC", "USD", "AUD", "BRL", "CAD", "CHF", "CNY", "EUR", "GBP", "HKD", "IDR", "INR", "JPY", "KRW", "MXN", "RUB"
+
+***the currency parameter needs to be uppercase***
+=ccprice("ethereum", "USD") will work
+=ccprice("ethereum", "usd") will not!
+   
 
 also very easy to get any of the following by making  minor edits to the code:
 
@@ -18,7 +25,6 @@ id
 name
 symbol 
 rank
-price_btc 
 24h_volume_usd
 market_cap_usd
 available_supply
@@ -27,11 +33,7 @@ percent_change_1h
 percent_change_24h 
 percent_change_7d
 last_updated
-    
- simply add in another if statement before the line that states "return price"
- example:
- 
-   if (currency == "24h_volume_usd") {  
-      var price = data[0].24h_volume_usd;
-      } 
+24h_volume_eur (or w/e your currency is)
+market_cap_eur (or w/e your currency is)
+
  
