@@ -14,7 +14,7 @@ To use in google sheets:
 The currency parameter accepts the following currencies:  
 "BTC", "USD", "AUD", "BRL", "CAD", "CHF", "CNY", "EUR", "GBP", "HKD", "IDR", "INR", "JPY", "KRW", "MXN", "RUB"
 
-__\*\*\*the currency parameter needs to be uppercase\*\*\*__
+__\*\*\*the currency parameter needs to be uppercase\*\*\*__  
 =ccprice("ethereum", "USD") will work  
 =ccprice("ethereum", "usd") will not!  
    
