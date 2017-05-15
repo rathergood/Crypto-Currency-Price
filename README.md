@@ -6,7 +6,7 @@ To use in google sheets:
 1. Open script editor (Under tools)
 2. File new "script file", give it a name
 3. Copy Code and Save
-4. In your sheet, type in =ccprice(cryptocurrency, currency)
+4. In your sheet, type in =ccprice(cryptocurrency, currency)  
    example:   
    =ccprice("ethereum", "USD")  
 
