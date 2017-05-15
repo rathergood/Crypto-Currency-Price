@@ -1,5 +1,5 @@
 # Crypto-Currency-Price
-Function to get price of a cryptocurrency into a google drive sheet. Uses coinmarketcap api
+Function to get price of a cryptocurrency into a google drive sheet. Uses the [coinmarketcap api](https://coinmarketcap.com/api/)
 
 To use in google sheets:
 
@@ -35,5 +35,8 @@ percent_change_7d
 last_updated  
 24h_volume_eur (or w/e your currency is)  
 market_cap_eur (or w/e your currency is)
+
+Show some love:  
+1N1iZfDJLYjCDNQMNaJosWyeJBAqJF91ub
 
  
