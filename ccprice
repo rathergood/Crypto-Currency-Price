@@ -1,28 +1,27 @@
 //returns price of cryptocurrency from coinmarketcap api.
-//takes two parameters, the name of the CC and whether you want it to return
-//the price in USD or BTC
+//takes two parameters, the name of the CC and the currency to return price
+//***name of the CC must be lowercase, and currency must be uppercase
 
-//example: =ccprice("ethereum", "usd")
+//example: =ccprice("ethereum", "USD")
 
 function ccprice(name, currency) 
 {
-var url = "https://api.coinmarketcap.com/v1/ticker/" + name
+var url = "https://api.coinmarketcap.com/v1/ticker/" + name + "?convert=" + currency
 var response = UrlFetchApp.fetch(url);
 var json = response.getContentText();
 var data = JSON.parse(json);
 
-  if (currency == "usd") {  
-      var price = data[0].price_usd;
-      } 
-  else if (currency == "btc") {
-      var price = data[0].price_btc
-      }
-  else {
-    var price = "currency?"
-    }
-return price
-
-}
-
 //had to add [0] to data because w/o it price was an array with one element in it
-//instead of the element itself
+//instead of the element itself  
+  
+var priceval = {  "EUR" : data[0].price_eur, "USD" : data[0].price_usd, "BTC" : data[0].price_btc,
+                  "AUD" : data[0].price_aud, "BRL" : data[0].price_brl, "CAD" : data[0].price_cad, 
+                  "CHF" : data[0].price_chf, "CNY" : data[0].price_cny, "RUB" : data[0].price_rub,
+                  "GBP" : data[0].price_gbp, "HKD" : data[0].price_hkd, "IDR" : data[0].price_idr, 
+                  "INR" : data[0].price_inr, "JPY" : data[0].price_jpy, "KRW" : data[0].price_krw, 
+                  "MXN" : data[0].price_mxn }
+
+var price = priceval[currency]
+                                    
+return price
+}
