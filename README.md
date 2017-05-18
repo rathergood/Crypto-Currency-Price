@@ -1,10 +1,14 @@
 # Crypto-Currency-Price
-Function to get price of a cryptocurrency into a google drive sheet. Uses the [coinmarketcap api](https://coinmarketcap.com/api/)
+Function to get price of a cryptocurrency into a google drive sheet. Uses the [coinmarketcap api](https://coinmarketcap.com/api/)  
+The Function takes in two parameters:  
+
+The **cryptocurrency** that you want the price of  
+The **currency** that you want the price of the cryptocurrency to be returned in
 
 To use in google sheets:
 
 1. Open script editor (Under tools)
-2. File new "script file", give it a name
+2. File new "script file"- give it a name
 3. Paste ccprice code and save
 4. In your sheet, type in =ccprice(cryptocurrency, currency)  
    example:   
@@ -12,16 +16,11 @@ To use in google sheets:
 
    
 The currency parameter accepts the following currencies:  
-"BTC", "USD", "AUD", "BRL", "CAD", "CHF", "CNY", "EUR", "GBP", "HKD", "IDR", "INR", "JPY", "KRW", "MXN", "RUB"
-
-__\*\*\*the currency parameter needs to be uppercase\*\*\*__  
-=ccprice("ethereum", "USD") will work  
-=ccprice("ethereum", "usd") will not!  
-   
+"BTC", "USD", "AUD", "BRL", "CAD", "CHF", "CNY", "EUR", "GBP", "HKD", "IDR", "INR", "JPY", "KRW", "MXN", "RUB"   
 
 also very easy to get any of the following by making  minor edits to the code:
 
-id  
+id
 name  
 symbol  
 rank  
