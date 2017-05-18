@@ -1,6 +1,5 @@
 //returns price of cryptocurrency from coinmarketcap api.
 //takes two parameters, the name of the CC and the currency to return price
-//***name of the CC must be lowercase, and currency must be uppercase
 
 //example: =ccprice("ethereum", "USD")
 
