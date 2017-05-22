@@ -18,6 +18,14 @@ To use in google sheets:
 The currency parameter accepts the following currencies:  
 "BTC", "USD", "AUD", "BRL", "CAD", "CHF", "CNY", "EUR", "GBP", "HKD", "IDR", "INR", "JPY", "KRW", "MXN", "RUB"   
 
+If the cryptocurrency parameter isn't working, then find your cc on coinmarketcap and use the name in the website address. For example:
+
+https://coinmarketcap.com/currencies/ethereum-classic/  
+so you would type in =ccprice("ethereum-classic", "btc")
+
+https://coinmarketcap.com/currencies/heat-ledger/  
+so you would type in =ccprice("heat-ledger", "btc")
+
 also very easy to get any of the following by making  minor edits to the code:
 
 id
