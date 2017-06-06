@@ -28,7 +28,7 @@ so you would type in =ccprice("heat-ledger", "btc")
 
 also very easy to get any of the following by making  minor edits to the code:
 
-id
+id  
 name  
 symbol  
 rank  
