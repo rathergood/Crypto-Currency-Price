@@ -43,7 +43,7 @@ last_updated
 24h_volume_eur (or w/e your currency is)  
 market_cap_eur (or w/e your currency is)
 
-Show some love:  
+Show some love (BTC):  
 1N1iZfDJLYjCDNQMNaJosWyeJBAqJF91ub
 
  
