@@ -25,7 +25,7 @@ var priceval = {  "EUR" : data[0].price_eur, "USD" : data[0].price_usd, "BTC" : 
                   "inr" : data[0].price_inr, "jpy" : data[0].price_jpy, "krw" : data[0].price_krw, 
                   "mxn" : data[0].price_mxn, "cad" : data[0].price_cad }
 
-var price = priceval[currency]
+var price = parseFloat(priceval[currency])
                                     
 return price
 }
