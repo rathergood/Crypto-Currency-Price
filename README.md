@@ -3,7 +3,7 @@ Function to get price of a cryptocurrency into a google drive sheet. Uses the [c
 The Function takes in two parameters:  
 
 The **cryptocurrency** that you want the price of  
-The **currency** that you want the price of the cryptocurrency to be returned in
+The **currency (or other info)** that you want the price of the cryptocurrency to be returned in
 
 To use in google sheets:
 
@@ -16,7 +16,11 @@ To use in google sheets:
 
    
 The currency parameter accepts the following currencies:  
-"BTC", "USD", "AUD", "BRL", "CAD", "CHF", "CNY", "EUR", "GBP", "HKD", "IDR", "INR", "JPY", "KRW", "MXN", "RUB"   
+"BTC", "USD", "AUD", "BRL", "CAD", "CHF", "CNY", "EUR", "GBP", "HKD", "IDR", "INR", "JPY", "KRW", "MXN", "RUB"
+
+The currency parameter also accepts the following:  
+"24h_volume_usd", "market_cap_usd", "available_supply", "total_supply",  
+"percent_change_1h", "percent_change_24h", "percent_change_7d", "last_updated" 
 
 If the cryptocurrency parameter isn't working, then find your cc on coinmarketcap and use the name in the website address. For example:
 
@@ -28,20 +32,9 @@ so you would type in =ccprice("heat-ledger", "btc")
 
 also very easy to get any of the following by making  minor edits to the code:
 
-id  
-name  
-symbol  
-rank  
-24h_volume_usd  
-market_cap_usd  
-available_supply  
-total_supply  
-percent_change_1h  
-percent_change_24h  
-percent_change_7d  
-last_updated  
-24h_volume_eur (or w/e your currency is)  
-market_cap_eur (or w/e your currency is)
+ 
+ 
+
 
 Show some love (BTC):  
 1N1iZfDJLYjCDNQMNaJosWyeJBAqJF91ub
