@@ -1,5 +1,5 @@
 //returns price (or other info) of cryptocurrency from coinmarketcap api.
-//takes two parameters, the name of the cryptocurrency and parameter that you want returned
+//takes two parameters, the name of the cryptocurrency and info that you want returned about the cc
 
 //example: =ccprice("ethereum", "USD")
 //example2 =ccprice("ethereum, "24h_volume_usd")
