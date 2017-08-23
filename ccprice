@@ -1,9 +1,10 @@
-//returns price of cryptocurrency from coinmarketcap api.
-//takes two parameters, the name of the cryptocurrency and the currency to return price in
+//returns price (or other info) of cryptocurrency from coinmarketcap api.
+//takes two parameters, the name of the cryptocurrency and parameter that you want returned
 
 //example: =ccprice("ethereum", "USD")
+//example2 =ccprice("ethereum, "24h_volume_usd")
 
-function ccprice(name, currency) 
+function ccpricedev(name, currency) 
 {
 var url = "https://api.coinmarketcap.com/v1/ticker/" + name + "?convert=" + currency
 var response = UrlFetchApp.fetch(url);
@@ -23,7 +24,11 @@ var priceval = {  "EUR" : data[0].price_eur, "USD" : data[0].price_usd, "BTC" : 
                   "chf" : data[0].price_chf, "cny" : data[0].price_cny, "rub" : data[0].price_rub,
                   "gbp" : data[0].price_gbp, "hkd" : data[0].price_hkd, "idr" : data[0].price_idr, 
                   "inr" : data[0].price_inr, "jpy" : data[0].price_jpy, "krw" : data[0].price_krw, 
-                  "mxn" : data[0].price_mxn, "cad" : data[0].price_cad }
+                  "mxn" : data[0].price_mxn, "cad" : data[0].price_cad, "24h_volume_usd" : data[0]["24h_volume_usd"], 
+                  "market_cap_usd" : data[0].market_cap_usd, "available_supply" : data[0].available_supply, 
+                  "total_supply" : data[0].total_supply, "percent_change_1h" : data[0].percent_change_1h, 
+                  "percent_change_24h" : data[0].percent_change_24h, "percent_change_7d" : data[0].percent_change_7d, 
+                  "last_updated" : data[0].last_updated }
 
 var price = parseFloat(priceval[currency])
                                     
