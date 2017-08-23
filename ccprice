@@ -4,7 +4,7 @@
 //example: =ccprice("ethereum", "USD")
 //example2 =ccprice("ethereum, "24h_volume_usd")
 
-function ccpricedev(name, currency) 
+function ccprice(name, currency) 
 {
 var url = "https://api.coinmarketcap.com/v1/ticker/" + name + "?convert=" + currency
 var response = UrlFetchApp.fetch(url);
