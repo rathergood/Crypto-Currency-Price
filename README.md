@@ -3,7 +3,7 @@ Function to get price of a cryptocurrency into a google drive sheet. Uses the [c
 The Function takes in two parameters:  
 
 The **cryptocurrency** that you want the price of  
-The **currency (or other info)** that you want the price of the cryptocurrency to be returned in
+The **currency (or other metric)** that you want the price of the cryptocurrency to be returned in
 
 To use in google sheets:
 
@@ -22,7 +22,7 @@ The currency parameter also accepts the following:
 "24h_volume_usd", "market_cap_usd", "available_supply", "total_supply",  
 "percent_change_1h", "percent_change_24h", "percent_change_7d", "last_updated" 
 
-The percent_change is in USD.
+The percent_change is in USD.  
 
 If the cryptocurrency parameter isn't working, then find your cc on coinmarketcap and use the name in the website address. For example:
 
@@ -30,8 +30,9 @@ https://coinmarketcap.com/currencies/ethereum-classic/
 so you would type in =ccprice("ethereum-classic", "btc")
 
 https://coinmarketcap.com/currencies/heat-ledger/  
-so you would type in =ccprice("heat-ledger", "btc")
+so you would type in =ccprice("heat-ledger", "btc")  
 
+The function should automatically update every 10 minutes. If it doesn't, try refreshing the page. If this still isn't working, then try cutting and pasting the sheet to "jumpstart" the API call.
 
 Show some love (BTC):  
 1N1iZfDJLYjCDNQMNaJosWyeJBAqJF91ub
