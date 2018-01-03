@@ -34,7 +34,8 @@ so you would type in =ccprice("heat-ledger", "btc")
 
 The function should automatically update every 10 minutes. If it doesn't, try refreshing the page. If this still isn't working, then try cutting and pasting the sheet to "jumpstart" the API call.
 
-Show some love (BTC):  
-1N1iZfDJLYjCDNQMNaJosWyeJBAqJF91ub
+Show some love:  
+0x32484F2628CB1D780e75E7b76Ecc05Fa14D88092 (ETH)  
+LYAUXKTHjtK2iWEyVKPyQrbwLv9vT2vevs (LTC)
 
  
