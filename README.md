@@ -1,39 +1,36 @@
 # Crypto-Currency-Price
-Function to get price of a cryptocurrency into a google drive sheet. Uses the [coinmarketcap api](https://coinmarketcap.com/api/). Auto-updates every 10 minutes    
+Function to get price of a cryptocurrency into a google drive sheet. Uses the [coingecko api](https://www.coingecko.com/en/api).
 
-The Function takes in two parameters:  
+The Function takes in the following parameters:  
 
-The **cryptocurrency** that you want the price of  
-The **currency (or other metric)** that you want the price of the cryptocurrency to be returned in
+The **cryptocurrency** that you want the price of 
+The **currency** that you want the price of the cryptocurrency to be returned in (optional- If left blank, defaults to USD)
+The **24 hour change** of the cryptocurrency (optional)
 
 To use in google sheets:
 
 1. Open script editor (Under tools)
-2. File new "script file"- give it a name
-3. Paste ccprice code and save
-4. In your sheet, type in =ccprice(cryptocurrency, currency)  
-   example:   
-   =ccprice("ethereum", "USD")  
+2. File new "script file"- give it a name (doesn't matter what)
+3. Paste cc code and save
+4. In your sheet, type in =cc(cryptocurrency, currency, 24h_change)  
+
+   example:  
+   =cc("ethereum")  will return the current price of ethereum in USD
+   =cc("ethereum", "btc") will return the current price of etherum in BTC
+   =cc("ethereum", "btc", "24h_change") will return the 24 hour percentage change of ethereum in BTC
 
    
-The currency parameter accepts the following currencies:  
-"BTC", "USD", "AUD", "BRL", "CAD", "CHF", "CNY", "EUR", "GBP", "HKD", "IDR", "INR", "JPY", "KRW", "MXN", "RUB"
+For the list of supported currencies, see:
+https://api.coingecko.com/api/v3/simple/supported_vs_currencies
 
-The currency parameter also accepts the following:  
-"24h_volume_usd", "market_cap_usd", "available_supply", "total_supply",  
-"percent_change_1h", "percent_change_24h", "percent_change_7d", "last_updated" 
 
-The percent_change is in USD.  
+If the cryptocurrency parameter isn't working, then find your cc on coingecko and use the name in the website address. For example:
 
-If the cryptocurrency parameter isn't working, then find your cc on coinmarketcap and use the name in the website address. For example:
+https://www.coingecko.com/en/coins/basic-attention-token  
+so you would type in =cc("basic-attention-token")
 
-https://coinmarketcap.com/currencies/ethereum-classic/  
-so you would type in =ccprice("ethereum-classic", "btc")
 
-https://coinmarketcap.com/currencies/heat-ledger/  
-so you would type in =ccprice("heat-ledger", "btc")  
-
-The function should automatically update every 10 minutes. If it doesn't, try refreshing the page. If this still isn't working, then try cutting and pasting the sheet to "jumpstart" the API call.
+The function unfortunately does not automatically update. To update, close and reopen the sheet.
 
 Show some love:  
 0x32484F2628CB1D780e75E7b76Ecc05Fa14D88092 (ETH)  
