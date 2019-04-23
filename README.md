@@ -11,7 +11,7 @@ To use in google sheets:
 
 1. Open script editor (Under tools)  
 2. File new "script file"- give it a name (doesn't matter what)  
-3. Paste cc code and save  
+3. Paste ccprice code and save  
 4. In your sheet, type in =cc(cryptocurrency, currency, 24h_change)  
 
    example:  
