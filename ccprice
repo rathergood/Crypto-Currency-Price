@@ -1,48 +1,20 @@
-//returns price (or other info) of cryptocurrency from coinmarketcap api.
-//takes two parameters, the name of the cryptocurrency and info that you want returned about the cc
+function CC(name, currencyOpt, dataOpt) {
 
-//example: =ccprice("ethereum", "USD")
-//example2 =ccprice("ethereum", "24h_volume_usd")
+    var currency = currencyOpt || "usd";
 
-function ccprice(name, currency) 
-{
-var url = "https://api.coinmarketcap.com/v1/ticker/" + name + "?convert=" + currency
-var response = UrlFetchApp.fetch(url);
-var json = response.getContentText();
-var data = JSON.parse(json);
+    var url = 'https://api.coingecko.com/api/v3/simple/price?ids=' + name + '&vs_currencies=' + currency.toLowerCase() + '&include_24hr_change=true'
+    var response = UrlFetchApp.fetch(url);
+    var json = response.getContentText();
+    var jsonobject = JSON.parse(json);
 
-//had to add [0] to data because w/o it price was an array with one element in it
-//instead of the element itself  
-  
-var priceval = {  "EUR" : data[0].price_eur, "USD" : data[0].price_usd, "BTC" : data[0].price_btc,
-                  "AUD" : data[0].price_aud, "BRL" : data[0].price_brl, "CAD" : data[0].price_cad, 
-                  "CHF" : data[0].price_chf, "CNY" : data[0].price_cny, "RUB" : data[0].price_rub,
-                  "GBP" : data[0].price_gbp, "HKD" : data[0].price_hkd, "IDR" : data[0].price_idr, 
-                  "INR" : data[0].price_inr, "JPY" : data[0].price_jpy, "KRW" : data[0].price_krw, 
-                  "MXN" : data[0].price_mxn, "eur" : data[0].price_eur, "usd" : data[0].price_usd, 
-                  "btc" : data[0].price_btc, "aud" : data[0].price_aud, "brl" : data[0].price_brl,  
-                  "chf" : data[0].price_chf, "cny" : data[0].price_cny, "rub" : data[0].price_rub,
-                  "gbp" : data[0].price_gbp, "hkd" : data[0].price_hkd, "idr" : data[0].price_idr, 
-                  "inr" : data[0].price_inr, "jpy" : data[0].price_jpy, "krw" : data[0].price_krw, 
-                  "mxn" : data[0].price_mxn, "cad" : data[0].price_cad, "CLP" : data[0].price_clp, 
-                  "CZP" : data[0].price_czp, "DKK" : data[0].price_dkk, "HUF" : data[0].price_huf,
-                  "ILS" : data[0].price_ils, "MYR" : data[0].price_myr, "nzd" : data[0].price_nzd,
-                  "NOK" : data[0].price_nok, "PHP" : data[0].price_php, "PKR" : data[0].price_pkr,
-                  "PLN" : data[0].price_pln, "SEK" : data[0].price_sek, "SGD" : data[0].price_sgd, 
-                  "THB" : data[0].price_thb, "TRY" : data[0].price_try, "TWD" : data[0].price_twd, 
-                  "ZAR" : data[0].price_zar, "NZD" : data[0].price_nzd, "zar" : data[0].price_zar,
-                  "clp" : data[0].price_clp, "czp" : data[0].price_czp, "dkk" : data[0].price_dkk,
-                  "huf" : data[0].price_huf, "ils" : data[0].price_ils, "myr" : data[0].price_myr, 
-                  "nok" : data[0].price_nok, "php" : data[0].price_php, "pkr" : data[0].price_pkr,
-                  "pln" : data[0].price_pln, "sek" : data[0].price_sek, "sgd" : data[0].price_sgd, 
-                  "thb" : data[0].price_thb, "try" : data[0].price_try, "twd" : data[0].price_twd, 
-                   
-                  "24h_volume_usd" : data[0]["24h_volume_usd"], "market_cap_usd" : data[0].market_cap_usd, 
-                  "available_supply" : data[0].available_supply, "total_supply" : data[0].total_supply,
-                  "percent_change_1h" : data[0].percent_change_1h, "percent_change_24h" : data[0].percent_change_24h,
-                  "percent_change_7d" : data[0].percent_change_7d, "last_updated" : data[0].last_updated }
+    if (dataOpt == undefined) {
+        var data = currency.toLowerCase()
+    } else {
+        var data = currencyOpt + "_" + dataOpt
+    }
 
-var price = parseFloat(priceval[currency])
-                                    
-return price
+    var datatoreturn = jsonobject[name][data]
+
+    return datatoreturn;
+
 }
