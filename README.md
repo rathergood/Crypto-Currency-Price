@@ -1,5 +1,5 @@
 # Crypto-Currency-Price
-Function to get price of a cryptocurrency into a google drive sheet. Uses the [coingecko api](https://www.coingecko.com/en/api).
+Function to get the price of a cryptocurrency into a google drive sheet. Uses the [coingecko api](https://www.coingecko.com/en/api).
 
 The Function takes in the following parameters:  
 
