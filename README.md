@@ -33,6 +33,7 @@ so you would type in =cc("basic-attention-token")
 The function unfortunately does not automatically update. To update, close and reopen the sheet.  
 
 Show some love:  
+371XjQ6h5ZNFEPRrRnfdRUutpAuQGzEkZK (BTC)
 0x32484F2628CB1D780e75E7b76Ecc05Fa14D88092 (ETH)  
 LYAUXKTHjtK2iWEyVKPyQrbwLv9vT2vevs (LTC)
 
