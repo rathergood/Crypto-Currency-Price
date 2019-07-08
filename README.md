@@ -16,7 +16,7 @@ To use in google sheets:
 
    example:  
    =cc("ethereum")  will return the current price of ethereum in USD  
-   =cc("ethereum", "btc") will return the current price of etherum in BTC  
+   =cc("ethereum", "btc") will return the current price of ethereum in BTC  
    =cc("ethereum", "btc", "24h_change") will return the 24 hour percentage change of ethereum in BTC  
 
    
